@@ -13,7 +13,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://wiliyaya.github.io/2025/04/04/hello-world/"/>
+    <link rel="canonical" href="https://wiliyaya.github.io/2025/05/09/547-省份数量/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -23,15 +23,20 @@
         
         <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://wiliyaya.github.io/2025/04/04/hello-world/index.html">
+<meta property="og:title" content="547.省份数量">
+<meta property="og:url" content="https://wiliyaya.github.io/2025/05/09/547-%E7%9C%81%E4%BB%BD%E6%95%B0%E9%87%8F/index.html">
 <meta property="og:site_name" content="wiliyaya&#39;s blog">
 <meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://wiliyaya.github.io/images/redefine-og.webp">
-<meta property="article:published_time" content="2025-04-04T05:32:36.079Z">
-<meta property="article:modified_time" content="2025-04-04T05:32:36.079Z">
+<meta property="article:published_time" content="2025-05-09T15:32:03.000Z">
+<meta property="article:modified_time" content="2025-05-09T15:41:50.462Z">
 <meta property="article:author" content="wiliyaya">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="DFS">
+<meta property="article:tag" content="并查集">
+<meta property="article:tag" content="图">
+<meta property="article:tag" content="LeetCode">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://wiliyaya.github.io/images/redefine-og.webp">
     
@@ -45,7 +50,7 @@
     
     <title>
         
-            Hello World | Wiliyaya&#39;s blog
+            547.省份数量 | Wiliyaya&#39;s blog
         
     </title>
 
@@ -360,7 +365,7 @@
 		<div class="article-title relative w-full">
 			
 			<div class="w-full flex items-center pt-6 justify-start">
-				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">Hello World</h1>
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">547.省份数量</h1>
 			</div>
 			
 		</div>
@@ -381,20 +386,47 @@
 					<div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2025-04-04 13:32:36</span>
-        <span class="mobile">2025-04-04 13:32:36</span>
+        <span class="desktop">2025-05-09 23:32:03</span>
+        <span class="mobile">2025-05-09 23:32:03</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-04-04 13:32:36</span>
-            <span class="mobile">2025-04-04 13:32:36</span>
+            <span class="desktop">2025-05-09 23:41:50</span>
+            <span class="mobile">2025-05-09 23:41:50</span>
             <span class="hover-info">更新</span>
         </span>
     
 
     
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/DFS/">DFS</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/">并查集</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E5%9B%BE/">图</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/LeetCode/">LeetCode</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
 
     
@@ -416,19 +448,34 @@
 
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-			<p>Welcome to <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/" >Hexo<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>! This is your very first post. Check <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/" >documentation<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html" >troubleshooting<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> or you can ask me on <a class="link"   target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues" >GitHub<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+			<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>有 <code>n</code> 个城市，其中一些彼此相连，另一些没有相连。如果城市 <code>a</code> 与城市 <code>b</code> 直接相连，且城市 <code>b</code> 与城市 <code>c</code> 直接相连，那么城市 <code>a</code> 与城市 <code>c</code> 间接相连。</p>
+<p><strong>省份</strong> 是一组直接或间接相连的城市，组内不含其他没有相连的城市。</p>
+<p>给你一个 <code>n x n</code> 的矩阵 <code>isConnected</code> ，其中 <code>isConnected[i][j] = 1</code> 表示第 <code>i</code> 个城市和第 <code>j</code> 个城市直接相连，而 <code>isConnected[i][j] = 0</code> 表示二者不直接相连。</p>
+<p>返回矩阵中 <strong>省份</strong> 的数量。</p>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="方法一：使用DFS计算无向连通图的连通分量个数"><a href="#方法一：使用DFS计算无向连通图的连通分量个数" class="headerlink" title="方法一：使用DFS计算无向连通图的连通分量个数"></a>方法一：使用DFS计算无向连通图的连通分量个数</h3><p>DFS递归，思路简单，也没有太大的改变</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">include &lt;iostream&gt;</span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; &amp;isConnected, <span class="type">int</span> i,vector&lt;<span class="type">int</span>&gt;&amp; visited)</span></span>&#123;</span><br><span class="line">    visited[i]=<span class="number">1</span>; <span class="comment">// 标记当前节点为已访问</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;isConnected[i].<span class="built_in">size</span>();j++)&#123;</span><br><span class="line">      <span class="keyword">if</span>(isConnected[i][j]==<span class="number">1</span>&amp;&amp; visited[j]==<span class="number">0</span>)&#123; <span class="comment">// 如果是连通的且未访问</span></span><br><span class="line">        <span class="built_in">dfs</span>(isConnected,j,visited); <span class="comment">// 递归访问</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="type">int</span> <span class="title">findCircleNum</span><span class="params">(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; &amp;isConnected)</span></span></span><br><span class="line"><span class="function">  </span>&#123;</span><br><span class="line">    <span class="comment">// isConnected是无向连通图的邻接矩阵</span></span><br><span class="line">    <span class="type">int</span> n = isConnected.<span class="built_in">size</span>();</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">visited</span><span class="params">(n, <span class="number">0</span>)</span></span>; <span class="comment">// 访问标记</span></span><br><span class="line">    <span class="type">int</span> cnt = <span class="number">0</span>;               <span class="comment">// 省份数</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="keyword">if</span> (!visited[i])</span><br><span class="line">      &#123;</span><br><span class="line">        cnt++;                        <span class="comment">// 发现一个新的省份</span></span><br><span class="line">        <span class="built_in">dfs</span>(isConnected, i, visited); <span class="comment">// 深度优先搜索</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> cnt; <span class="comment">// 返回省份数</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html" >Writing<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/server.html" >Server<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+<h3 id="方法二：用并查集的方法"><a href="#方法二：用并查集的方法" class="headerlink" title="方法二：用并查集的方法"></a>方法二：用并查集的方法</h3><h4 id="主要步骤"><a href="#主要步骤" class="headerlink" title="主要步骤"></a>主要步骤</h4><ol>
+<li>把每个城市都设为一个节点，初始化父节点都为自己</li>
+<li>遍历邻接矩阵，当发现_isConnect [i][j ] &#x3D;&#x3D; 1 时，说明这两个城市在一个省内</li>
+<li>检查它们的根节点，如果根节点不同，用Union把它们合并，并把size–</li>
+<li>最后size的值即为结果</li>
+</ol>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">UnionFind</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  vector&lt;<span class="type">int</span>&gt; parent;</span><br><span class="line">  <span class="type">int</span> size;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">UnionFind</span>(<span class="type">int</span> n)</span><br><span class="line">  &#123;</span><br><span class="line">    parent.<span class="built_in">resize</span>(n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">      parent[i] = i;</span><br><span class="line">    &#125;</span><br><span class="line">    size = n;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="type">int</span> <span class="title">Find</span><span class="params">(<span class="type">int</span> i)</span></span></span><br><span class="line"><span class="function">  </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (parent[i] == i)</span><br><span class="line">      <span class="keyword">return</span> i;</span><br><span class="line">    <span class="keyword">return</span> parent[i] = <span class="built_in">Find</span>(parent[i]); <span class="comment">// 路径压缩</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">Union</span><span class="params">(<span class="type">int</span> p, <span class="type">int</span> q)</span></span></span><br><span class="line"><span class="function">  </span>&#123;</span><br><span class="line">    <span class="type">int</span> rootp = <span class="built_in">Find</span>(p);</span><br><span class="line">    <span class="type">int</span> rootq = <span class="built_in">Find</span>(q);</span><br><span class="line">    <span class="keyword">if</span> (rootp != rootq)</span><br><span class="line">    &#123;</span><br><span class="line">      parent[rootp] = rootq; <span class="comment">// 将p的根节点指向q的根节点</span></span><br><span class="line">      size--;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="function"><span class="type">int</span> <span class="title">findCircleNum</span><span class="params">(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; &amp;isConnected)</span></span></span><br><span class="line"><span class="function">  </span>&#123;</span><br><span class="line">    <span class="type">int</span> n = isConnected.<span class="built_in">size</span>();</span><br><span class="line">    UnionFind *uf = <span class="keyword">new</span> <span class="built_in">UnionFind</span>(n); <span class="comment">// 初始化并查集</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; n; j++)</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="keyword">if</span> (isConnected[i][j] == <span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">          uf-&gt;<span class="built_in">Union</span>(i, j); <span class="comment">// 如果i和j是连通的，合并它们</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> uf-&gt;size; <span class="comment">// 返回连通分量的数量</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html" >Generating<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
+<h2 id="优化版的题解"><a href="#优化版的题解" class="headerlink" title="优化版的题解"></a>优化版的题解</h2><p>本来写写基本方法就觉得已经够了，但我寻思当时我也浅研究了一下并查集的优化，于是决定补充完整。</p>
+<h3 id="1-按秩合并-路径压缩"><a href="#1-按秩合并-路径压缩" class="headerlink" title="1. 按秩合并 + 路径压缩"></a>1. 按秩合并 + 路径压缩</h3><div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">UnionFind</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; parent, rank;</span><br><span class="line">    <span class="type">int</span> size;</span><br><span class="line">    <span class="built_in">UnionFind</span>(<span class="type">int</span> n) : <span class="built_in">parent</span>(n), <span class="built_in">rank</span>(n, <span class="number">0</span>), <span class="built_in">size</span>(n) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) parent[i] = i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">Find</span><span class="params">(<span class="type">int</span> i)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (parent[i] != i) parent[i] = <span class="built_in">Find</span>(parent[i]);</span><br><span class="line">        <span class="keyword">return</span> parent[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">Union</span><span class="params">(<span class="type">int</span> p, <span class="type">int</span> q)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> rootp = <span class="built_in">Find</span>(p), rootq = <span class="built_in">Find</span>(q);</span><br><span class="line">        <span class="keyword">if</span> (rootp == rootq) <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">if</span> (rank[rootp] &lt; rank[rootq]) parent[rootp] = rootq;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (rank[rootp] &gt; rank[rootq]) parent[rootq] = rootp;</span><br><span class="line">        <span class="keyword">else</span> &#123; parent[rootq] = rootp; rank[rootp]++; &#125;</span><br><span class="line">        size--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html" >Deployment<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+
+<h3 id="2-遍历邻接矩阵时只遍历上三角"><a href="#2-遍历邻接矩阵时只遍历上三角" class="headerlink" title="2. 遍历邻接矩阵时只遍历上三角"></a>2. 遍历邻接矩阵时只遍历上三角</h3><ul>
+<li>由于 isConnected (是对称矩阵（无向图），可以只遍历<code>j &gt; i</code>的部分，避免重复合并，减少一半的遍历次数。</li>
+</ul>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; n; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (isConnected[i][j] == <span class="number">1</span>) &#123;</span><br><span class="line">            uf-&gt;<span class="built_in">Union</span>(i, j);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="3-其它"><a href="#3-其它" class="headerlink" title="3.其它"></a>3.其它</h3><p>有一种优化的方法是让根节点的parent数组的值为负数，负数的绝对值即为秩的大小（树高或总节点数）。<br>这样一个parent数组就可以搞定一切。</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">UnionFind</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; parent;</span><br><span class="line">    <span class="type">int</span> size;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">UnionFind</span>(<span class="type">int</span> n)</span><br><span class="line">    &#123;</span><br><span class="line">        parent.<span class="built_in">resize</span>(n);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            parent[i] = <span class="number">-1</span>; <span class="comment">// 每个集合初始大小为1</span></span><br><span class="line">        &#125;</span><br><span class="line">        size = n;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">Find</span><span class="params">(<span class="type">int</span> i)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (parent[i] &lt; <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">        <span class="keyword">return</span> parent[i] = <span class="built_in">Find</span>(parent[i]); <span class="comment">// 路径压缩</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">Union</span><span class="params">(<span class="type">int</span> p, <span class="type">int</span> q)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="type">int</span> rootp = <span class="built_in">Find</span>(p);</span><br><span class="line">        <span class="type">int</span> rootq = <span class="built_in">Find</span>(q);</span><br><span class="line">        <span class="keyword">if</span> (rootp == rootq) <span class="keyword">return</span>;</span><br><span class="line">        <span class="comment">// 小树合并到大树</span></span><br><span class="line">        <span class="keyword">if</span> (parent[rootp] &lt; parent[rootq]) &#123;</span><br><span class="line">            parent[rootp] += parent[rootq]; <span class="comment">// 更新根节点的秩（负数，节点数相加）</span></span><br><span class="line">            parent[rootq] = rootp;          <span class="comment">// rootq指向rootp</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            parent[rootq] += parent[rootp];</span><br><span class="line">            parent[rootp] = rootq;</span><br><span class="line">        &#125;</span><br><span class="line">        size--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
+
 
 		</div>
 
@@ -436,18 +483,18 @@
 		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
 			<div class="article-copyright-info-container">
     <ul>
-        <li><strong>标题:</strong> Hello World</li>
+        <li><strong>标题:</strong> 547.省份数量</li>
         <li><strong>作者:</strong> Wiliyaya</li>
         <li><strong>创建于
-                :</strong> 2025-04-04 13:32:36</li>
+                :</strong> 2025-05-09 23:32:03</li>
         
             <li>
                 <strong>更新于
-                    :</strong> 2025-04-04 13:32:36
+                    :</strong> 2025-05-09 23:41:50
             </li>
         
         <li>
-            <strong>链接:</strong> https://redefine.ohevan.com/2025/04/04/hello-world/
+            <strong>链接:</strong> https://redefine.ohevan.com/2025/05/09/547-省份数量/
         </li>
         <li>
             <strong>
@@ -466,24 +513,48 @@
 		
 
 		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/DFS/">#DFS</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/">#并查集</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E5%9B%BE/">#图</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/LeetCode/">#LeetCode</a>&nbsp;
+			</li>
+			
+		</ul>
+		
 
 		
 
 		
 		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
 			
-			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="prev" rel="prev" href="/2025/04/30/19%E5%B2%81/">
-					<span class="left arrow-icon flex justify-center items-center">
-						<i class="fa-solid fa-chevron-left"></i>
-					</span>
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/2025/04/30/19%E5%B2%81/">
 					<span class="title flex justify-center items-center">
 						<span class="post-nav-title-item">19岁</span>
-						<span class="post-nav-item">上一篇</span>
+						<span class="post-nav-item">下一篇</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
 					</span>
 				</a>
 			</div>
-			
 			
 		</div>
 		
@@ -551,8 +622,8 @@
 		<div class="post-toc-wrap">
 	<div class="post-toc">
 		<div class="toc-title">目录</div>
-		<div class="page-title">Hello World</div>
-		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol>
+		<div class="page-title">547.省份数量</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3"><span class="nav-text">题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80%EF%BC%9A%E4%BD%BF%E7%94%A8DFS%E8%AE%A1%E7%AE%97%E6%97%A0%E5%90%91%E8%BF%9E%E9%80%9A%E5%9B%BE%E7%9A%84%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F%E4%B8%AA%E6%95%B0"><span class="nav-text">方法一：使用DFS计算无向连通图的连通分量个数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C%EF%BC%9A%E7%94%A8%E5%B9%B6%E6%9F%A5%E9%9B%86%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-text">方法二：用并查集的方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E5%8C%96%E7%89%88%E7%9A%84%E9%A2%98%E8%A7%A3"><span class="nav-text">优化版的题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%8C%89%E7%A7%A9%E5%90%88%E5%B9%B6-%E8%B7%AF%E5%BE%84%E5%8E%8B%E7%BC%A9"><span class="nav-text">1. 按秩合并 + 路径压缩</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E9%81%8D%E5%8E%86%E9%82%BB%E6%8E%A5%E7%9F%A9%E9%98%B5%E6%97%B6%E5%8F%AA%E9%81%8D%E5%8E%86%E4%B8%8A%E4%B8%89%E8%A7%92"><span class="nav-text">2. 遍历邻接矩阵时只遍历上三角</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%85%B6%E5%AE%83"><span class="nav-text">3.其它</span></a></li></ol></li></ol>
 
 	</div>
 </div>
