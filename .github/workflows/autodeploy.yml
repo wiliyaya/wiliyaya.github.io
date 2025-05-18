@@ -28,7 +28,7 @@ jobs:
         cache: npm  # 让 GitHub 自动缓存 npm 依赖，加快执行速度
 
     - name: 设置时区
-      run: 
+      run: |
         export TZ='Asia/Shanghai'
 
     - name: 缓存 Hexo 依赖
@@ -36,11 +36,11 @@ jobs:
       with:
         path: node_modules
         key: hexo-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
-        restore-keys: 
+        restore-keys: |
           hexo-${{ runner.os }}-
 
     - name: 安装 Hexo
-      run: 
+      run: |
         npm install hexo-cli -g
 
     - name: 安装依赖
@@ -48,12 +48,12 @@ jobs:
 
 
     - name: 生成静态文件
-      run: 
+      run: |
         hexo clean
         hexo generate
 
     - name: 部署到 GitHub Pages
-      run: 
+      run: |
         cd ./public
         git init
         git config --global user.name 'wiliyaya' 
