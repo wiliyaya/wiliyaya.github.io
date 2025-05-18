@@ -13,7 +13,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://wiliyaya.github.io/2025/05/09/547-省份数量/"/>
+    <link rel="canonical" href="https://wiliyaya.github.io/2025/05/18/散列查找/散列查找/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -23,20 +23,16 @@
         
         <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="547.省份数量">
-<meta property="og:url" content="https://wiliyaya.github.io/2025/05/09/547-%E7%9C%81%E4%BB%BD%E6%95%B0%E9%87%8F/index.html">
+<meta property="og:title" content="散列查找">
+<meta property="og:url" content="https://wiliyaya.github.io/2025/05/18/%E6%95%A3%E5%88%97%E6%9F%A5%E6%89%BE/%E6%95%A3%E5%88%97%E6%9F%A5%E6%89%BE/index.html">
 <meta property="og:site_name" content="wiliyaya&#39;s blog">
 <meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://wiliyaya.github.io/images/redefine-og.webp">
-<meta property="article:published_time" content="2025-05-09T15:32:03.000Z">
-<meta property="article:modified_time" content="2025-05-09T15:41:50.462Z">
+<meta property="article:published_time" content="2025-05-18T07:01:12.000Z">
+<meta property="article:modified_time" content="2025-05-18T07:10:35.892Z">
 <meta property="article:author" content="wiliyaya">
-<meta property="article:tag" content="算法">
-<meta property="article:tag" content="DFS">
-<meta property="article:tag" content="并查集">
-<meta property="article:tag" content="图">
-<meta property="article:tag" content="LeetCode">
+<meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://wiliyaya.github.io/images/redefine-og.webp">
     
@@ -50,7 +46,7 @@
     
     <title>
         
-            547.省份数量 | Wiliyaya&#39;s blog
+            散列查找 | Wiliyaya&#39;s blog
         
     </title>
 
@@ -365,7 +361,7 @@
 		<div class="article-title relative w-full">
 			
 			<div class="w-full flex items-center pt-6 justify-start">
-				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">547.省份数量</h1>
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">散列查找</h1>
 			</div>
 			
 		</div>
@@ -386,15 +382,15 @@
 					<div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2025-05-09 23:32:03</span>
-        <span class="mobile">2025-05-09 23:32:03</span>
+        <span class="desktop">2025-05-18 15:01:12</span>
+        <span class="mobile">2025-05-18 15:01:12</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-05-09 23:41:50</span>
-            <span class="mobile">2025-05-09 23:41:50</span>
+            <span class="desktop">2025-05-18 15:10:35</span>
+            <span class="mobile">2025-05-18 15:10:35</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -406,23 +402,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        | <a href="/tags/DFS/">DFS</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        | <a href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/">并查集</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        | <a href="/tags/%E5%9B%BE/">图</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        | <a href="/tags/LeetCode/">LeetCode</a>&nbsp;
+                        <a href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>&nbsp;
                     </li>
                 
             </ul>
@@ -448,33 +428,86 @@
 
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-			<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>有 <code>n</code> 个城市，其中一些彼此相连，另一些没有相连。如果城市 <code>a</code> 与城市 <code>b</code> 直接相连，且城市 <code>b</code> 与城市 <code>c</code> 直接相连，那么城市 <code>a</code> 与城市 <code>c</code> 间接相连。</p>
-<p><strong>省份</strong> 是一组直接或间接相连的城市，组内不含其他没有相连的城市。</p>
-<p>给你一个 <code>n x n</code> 的矩阵 <code>isConnected</code> ，其中 <code>isConnected[i][j] = 1</code> 表示第 <code>i</code> 个城市和第 <code>j</code> 个城市直接相连，而 <code>isConnected[i][j] = 0</code> 表示二者不直接相连。</p>
-<p>返回矩阵中 <strong>省份</strong> 的数量。</p>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="方法一：使用DFS计算无向连通图的连通分量个数"><a href="#方法一：使用DFS计算无向连通图的连通分量个数" class="headerlink" title="方法一：使用DFS计算无向连通图的连通分量个数"></a>方法一：使用DFS计算无向连通图的连通分量个数</h3><p>DFS递归，思路简单，也没有太大的改变</p>
-<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">include &lt;iostream&gt;</span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; &amp;isConnected, <span class="type">int</span> i,vector&lt;<span class="type">int</span>&gt;&amp; visited)</span></span>&#123;</span><br><span class="line">    visited[i]=<span class="number">1</span>; <span class="comment">// 标记当前节点为已访问</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;isConnected[i].<span class="built_in">size</span>();j++)&#123;</span><br><span class="line">      <span class="keyword">if</span>(isConnected[i][j]==<span class="number">1</span>&amp;&amp; visited[j]==<span class="number">0</span>)&#123; <span class="comment">// 如果是连通的且未访问</span></span><br><span class="line">        <span class="built_in">dfs</span>(isConnected,j,visited); <span class="comment">// 递归访问</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="type">int</span> <span class="title">findCircleNum</span><span class="params">(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; &amp;isConnected)</span></span></span><br><span class="line"><span class="function">  </span>&#123;</span><br><span class="line">    <span class="comment">// isConnected是无向连通图的邻接矩阵</span></span><br><span class="line">    <span class="type">int</span> n = isConnected.<span class="built_in">size</span>();</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">visited</span><span class="params">(n, <span class="number">0</span>)</span></span>; <span class="comment">// 访问标记</span></span><br><span class="line">    <span class="type">int</span> cnt = <span class="number">0</span>;               <span class="comment">// 省份数</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="keyword">if</span> (!visited[i])</span><br><span class="line">      &#123;</span><br><span class="line">        cnt++;                        <span class="comment">// 发现一个新的省份</span></span><br><span class="line">        <span class="built_in">dfs</span>(isConnected, i, visited); <span class="comment">// 深度优先搜索</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> cnt; <span class="comment">// 返回省份数</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
+			<h2 id="一、散列函数的构造"><a href="#一、散列函数的构造" class="headerlink" title="一、散列函数的构造"></a>一、散列函数的构造</h2><p>原数据的关键字<code>key</code> 通过散列函数 <code>H(key)</code> 映射到新的地址<br>用一个质数求余 发生冲突的可能性更小 </p>
+<h2 id="二、散列冲突的解决方案"><a href="#二、散列冲突的解决方案" class="headerlink" title="二、散列冲突的解决方案"></a>二、散列冲突的解决方案</h2><h3 id="1-开放地址法"><a href="#1-开放地址法" class="headerlink" title="1.开放地址法"></a>1.开放地址法</h3><p>这里的开放地址其实就是一个空位置<br>开放地址法就是如果发生冲突，就按照规则，寻找空位置；最先找到的空位置就是这个关键字的对应的存储位置</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">h[i]=(H(key)+d[i])% table_size  (i=1,2,...,table_size-1)</span><br></pre></td></tr></table></figure></div>
 
-
-<h3 id="方法二：用并查集的方法"><a href="#方法二：用并查集的方法" class="headerlink" title="方法二：用并查集的方法"></a>方法二：用并查集的方法</h3><h4 id="主要步骤"><a href="#主要步骤" class="headerlink" title="主要步骤"></a>主要步骤</h4><ol>
-<li>把每个城市都设为一个节点，初始化父节点都为自己</li>
-<li>遍历邻接矩阵，当发现_isConnect [i][j ] &#x3D;&#x3D; 1 时，说明这两个城市在一个省内</li>
-<li>检查它们的根节点，如果根节点不同，用Union把它们合并，并把size–</li>
-<li>最后size的值即为结果</li>
-</ol>
-<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">UnionFind</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  vector&lt;<span class="type">int</span>&gt; parent;</span><br><span class="line">  <span class="type">int</span> size;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">UnionFind</span>(<span class="type">int</span> n)</span><br><span class="line">  &#123;</span><br><span class="line">    parent.<span class="built_in">resize</span>(n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">      parent[i] = i;</span><br><span class="line">    &#125;</span><br><span class="line">    size = n;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="type">int</span> <span class="title">Find</span><span class="params">(<span class="type">int</span> i)</span></span></span><br><span class="line"><span class="function">  </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (parent[i] == i)</span><br><span class="line">      <span class="keyword">return</span> i;</span><br><span class="line">    <span class="keyword">return</span> parent[i] = <span class="built_in">Find</span>(parent[i]); <span class="comment">// 路径压缩</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">Union</span><span class="params">(<span class="type">int</span> p, <span class="type">int</span> q)</span></span></span><br><span class="line"><span class="function">  </span>&#123;</span><br><span class="line">    <span class="type">int</span> rootp = <span class="built_in">Find</span>(p);</span><br><span class="line">    <span class="type">int</span> rootq = <span class="built_in">Find</span>(q);</span><br><span class="line">    <span class="keyword">if</span> (rootp != rootq)</span><br><span class="line">    &#123;</span><br><span class="line">      parent[rootp] = rootq; <span class="comment">// 将p的根节点指向q的根节点</span></span><br><span class="line">      size--;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="function"><span class="type">int</span> <span class="title">findCircleNum</span><span class="params">(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; &amp;isConnected)</span></span></span><br><span class="line"><span class="function">  </span>&#123;</span><br><span class="line">    <span class="type">int</span> n = isConnected.<span class="built_in">size</span>();</span><br><span class="line">    UnionFind *uf = <span class="keyword">new</span> <span class="built_in">UnionFind</span>(n); <span class="comment">// 初始化并查集</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; n; j++)</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="keyword">if</span> (isConnected[i][j] == <span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">          uf-&gt;<span class="built_in">Union</span>(i, j); <span class="comment">// 如果i和j是连通的，合并它们</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> uf-&gt;size; <span class="comment">// 返回连通分量的数量</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="优化版的题解"><a href="#优化版的题解" class="headerlink" title="优化版的题解"></a>优化版的题解</h2><p>本来写写基本方法就觉得已经够了，但我寻思当时我也浅研究了一下并查集的优化，于是决定补充完整。</p>
-<h3 id="1-按秩合并-路径压缩"><a href="#1-按秩合并-路径压缩" class="headerlink" title="1. 按秩合并 + 路径压缩"></a>1. 按秩合并 + 路径压缩</h3><div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">UnionFind</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; parent, rank;</span><br><span class="line">    <span class="type">int</span> size;</span><br><span class="line">    <span class="built_in">UnionFind</span>(<span class="type">int</span> n) : <span class="built_in">parent</span>(n), <span class="built_in">rank</span>(n, <span class="number">0</span>), <span class="built_in">size</span>(n) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) parent[i] = i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">Find</span><span class="params">(<span class="type">int</span> i)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (parent[i] != i) parent[i] = <span class="built_in">Find</span>(parent[i]);</span><br><span class="line">        <span class="keyword">return</span> parent[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">Union</span><span class="params">(<span class="type">int</span> p, <span class="type">int</span> q)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> rootp = <span class="built_in">Find</span>(p), rootq = <span class="built_in">Find</span>(q);</span><br><span class="line">        <span class="keyword">if</span> (rootp == rootq) <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">if</span> (rank[rootp] &lt; rank[rootq]) parent[rootp] = rootq;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (rank[rootp] &gt; rank[rootq]) parent[rootq] = rootp;</span><br><span class="line">        <span class="keyword">else</span> &#123; parent[rootq] = rootp; rank[rootp]++; &#125;</span><br><span class="line">        size--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
-
-
-<h3 id="2-遍历邻接矩阵时只遍历上三角"><a href="#2-遍历邻接矩阵时只遍历上三角" class="headerlink" title="2. 遍历邻接矩阵时只遍历上三角"></a>2. 遍历邻接矩阵时只遍历上三角</h3><ul>
-<li>由于 isConnected (是对称矩阵（无向图），可以只遍历<code>j &gt; i</code>的部分，避免重复合并，减少一半的遍历次数。</li>
+<p><code>d[i]</code>  一般有三种写法:</p>
+<ul>
+<li>线性探测  d[i] &#x3D;1,2,3,…,table_size  (其实是d[i] &#x3D; c* i ,但是c通常取1)</li>
+<li>二次探测（平方探测再散列）：d[i]&#x3D;1²,-1²,2²,-2²,…,k²,-k² (k&lt;&#x3D;table_size&#x2F;2)</li>
+<li>伪随机探测</li>
 </ul>
-<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; n; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (isConnected[i][j] == <span class="number">1</span>) &#123;</span><br><span class="line">            uf-&gt;<span class="built_in">Union</span>(i, j);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h4 id="（1）线性探测法"><a href="#（1）线性探测法" class="headerlink" title="（1）线性探测法"></a>（1）线性探测法</h4><p>冲突后依次探测下一个位置，知道遇到空位置<br>构建散列表<br>查找成功和失败的AVL分别如何计算<br>*注意在教材中，和空位置的比较是不计入比较次数的<br>（ 但是有的地方认为空位置其实是NULL类型，也是一次比较</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/Pasted%20image%2020250517151006.png"
+                      alt="alt text"
+                ></p>
+<p>删除元素时，不能直接把该位置换成空位置的标记（会造成后面的数被误认为不存在），应该设一个删除标记。<br>增加新的元素时，删除标记和空标记都可以插入新元素，而查找时遇到空位置就代表结束，遇到删除标记则继续查找</p>
+<h4 id="（2）平方探测"><a href="#（2）平方探测" class="headerlink" title="（2）平方探测"></a>（2）平方探测</h4><p>d[i]&#x3D;1²,-1²,2²,-2²,…,k²,-k² (k&lt;&#x3D;table_size&#x2F;2)<br>缺点是不一定能探测到所有散列表位置<br>但是研究表明，表长如果是某个<code>4k+3</code>的质数（7，11…），那么一定能探测到所有的位置</p>
+<p>删除也是设删除标记</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/Pasted%20image%2020250517151145.png"
+                      alt="alt text"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/Pasted%20image%2020250517151116.png"
+                      alt="alt text"
+                ></p>
+<h4 id="（3）随机"><a href="#（3）随机" class="headerlink" title="（3）随机"></a>（3）随机</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/Pasted%20image%2020250517150452.png"
+                      alt="alt text"
+                ></p>
+<h3 id="2-再散列法"><a href="#2-再散列法" class="headerlink" title="2.再散列法"></a>2.再散列法</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">h[i]=RH(key); (i=1,2,3...,n)</span><br></pre></td></tr></table></figure></div>
+<p>就是有n个不同的散列函数，当第一个有冲突时，就用第二个散列函数计算的结果，以此类推</p>
+<h3 id="3-链地址法"><a href="#3-链地址法" class="headerlink" title="3.链地址法"></a>3.链地址法</h3><p>把所有映射到同一个位置的关键字用一个链表串起来</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/Pasted%20image%2020250517154735.png"
+                      alt="alt text"
+                ></p>
+<p>ASL(成功)&#x3D;   ∑(每一层元素的个数 * 这一层相应的比较次数）&#x2F;元素个数<br>ASL(失败)&#x3D;  ∑每个链表找到空位置时需要的比较个数（每个槽中的元素个数） &#x2F; 链表的个数（槽的个数）</p>
+<p>删除的话就直接删</p>
+<h2 id="相关代码"><a href="#相关代码" class="headerlink" title="相关代码"></a>相关代码</h2><p>这是deepseek帮我翻译的代码，我还没仔细读，先放在这存着</p>
+<p>以下是伪代码转换后的C++代码，包含详细注释：</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 散列表项的状态：活跃、空、已删除（用于懒惰删除）</span></span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">EntryStatus</span> &#123; ACTIVE, EMPTY, DELETED &#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 散列表项结构体</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V&gt;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">HashEntry</span> &#123;</span><br><span class="line">    K key;          <span class="comment">// 键</span></span><br><span class="line">    V value;        <span class="comment">// 值</span></span><br><span class="line">    EntryStatus status; <span class="comment">// 状态</span></span><br><span class="line">    <span class="built_in">HashEntry</span>() : <span class="built_in">status</span>(EMPTY) &#123;&#125; <span class="comment">// 初始化状态为空</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 开放地址法散列表类</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> V&gt;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">HashTable</span> &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    vector&lt;HashEntry&lt;K, V&gt;&gt; table; <span class="comment">// 散列表存储数组</span></span><br><span class="line">    <span class="type">int</span> table_size;                <span class="comment">// 散列表总大小</span></span><br><span class="line">    <span class="type">int</span> current_size;              <span class="comment">// 当前已存储的元素数量</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 散列函数示例（可根据需求替换）</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">hashFunction</span><span class="params">(<span class="type">const</span> K&amp; key)</span> <span class="type">const</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> hash&lt;K&gt;&#123;&#125;(key) % table_size;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 解决冲突的函数（示例：线性探测，返回固定步长1）</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">solveCollision</span><span class="params">(<span class="type">const</span> K&amp; key, <span class="type">int</span> count, <span class="type">int</span> hash_v)</span> <span class="type">const</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>; <span class="comment">// 线性探测：每次步长+1</span></span><br><span class="line">        <span class="comment">// 若使用二次探测，可返回 count * count;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">HashTable</span>(<span class="type">int</span> size) : <span class="built_in">table</span>(size), <span class="built_in">table_size</span>(size), <span class="built_in">current_size</span>(<span class="number">0</span>) &#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 查找函数：返回键的位置或第一个空位</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">searchHash</span><span class="params">(<span class="type">const</span> K&amp; key)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> hash_v = <span class="built_in">hashFunction</span>(key); <span class="comment">// 计算初始散列地址</span></span><br><span class="line">        <span class="type">int</span> p = hash_v;</span><br><span class="line">        <span class="type">int</span> count = <span class="number">0</span>; <span class="comment">// 冲突次数</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (table[p].status != EMPTY &amp;&amp; table[p].key != key) &#123;</span><br><span class="line">            count++;</span><br><span class="line">            <span class="comment">// 计算下一个探查地址</span></span><br><span class="line">            p = hash_v + <span class="built_in">solveCollision</span>(key, count, hash_v);</span><br><span class="line">            p %= table_size; <span class="comment">// 确保不越界</span></span><br><span class="line">            <span class="keyword">if</span> (p &lt; <span class="number">0</span>) p += table_size; <span class="comment">// 处理负数情况</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> p; <span class="comment">// 返回找到的位置或空位</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 插入函数</span></span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">insertHash</span><span class="params">(<span class="type">const</span> K&amp; key, <span class="type">const</span> V&amp; value)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (current_size &gt;= table_size) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>; <span class="comment">// 表已满（可根据需求扩展表大小）</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> p = <span class="built_in">searchHash</span>(key); <span class="comment">// 查找插入位置</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 如果当前位置为空或已删除，则插入新元素</span></span><br><span class="line">        <span class="keyword">if</span> (table[p].status != ACTIVE) &#123;</span><br><span class="line">            table[p].key = key;</span><br><span class="line">            table[p].value = value;</span><br><span class="line">            table[p].status = ACTIVE;</span><br><span class="line">            current_size++;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 如果键已存在，可根据需求更新值</span></span><br><span class="line">        <span class="comment">// 此处直接返回false表示不覆盖已有键</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
 
-<h3 id="3-其它"><a href="#3-其它" class="headerlink" title="3.其它"></a>3.其它</h3><p>有一种优化的方法是让根节点的parent数组的值为负数，负数的绝对值即为秩的大小（树高或总节点数）。<br>这样一个parent数组就可以搞定一切。</p>
-<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">UnionFind</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; parent;</span><br><span class="line">    <span class="type">int</span> size;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">UnionFind</span>(<span class="type">int</span> n)</span><br><span class="line">    &#123;</span><br><span class="line">        parent.<span class="built_in">resize</span>(n);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            parent[i] = <span class="number">-1</span>; <span class="comment">// 每个集合初始大小为1</span></span><br><span class="line">        &#125;</span><br><span class="line">        size = n;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">Find</span><span class="params">(<span class="type">int</span> i)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (parent[i] &lt; <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">        <span class="keyword">return</span> parent[i] = <span class="built_in">Find</span>(parent[i]); <span class="comment">// 路径压缩</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">Union</span><span class="params">(<span class="type">int</span> p, <span class="type">int</span> q)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="type">int</span> rootp = <span class="built_in">Find</span>(p);</span><br><span class="line">        <span class="type">int</span> rootq = <span class="built_in">Find</span>(q);</span><br><span class="line">        <span class="keyword">if</span> (rootp == rootq) <span class="keyword">return</span>;</span><br><span class="line">        <span class="comment">// 小树合并到大树</span></span><br><span class="line">        <span class="keyword">if</span> (parent[rootp] &lt; parent[rootq]) &#123;</span><br><span class="line">            parent[rootp] += parent[rootq]; <span class="comment">// 更新根节点的秩（负数，节点数相加）</span></span><br><span class="line">            parent[rootq] = rootp;          <span class="comment">// rootq指向rootp</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            parent[rootq] += parent[rootp];</span><br><span class="line">            parent[rootp] = rootq;</span><br><span class="line">        &#125;</span><br><span class="line">        size--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
+<h3 id="代码说明："><a href="#代码说明：" class="headerlink" title="代码说明："></a>代码说明：</h3><ol>
+<li><p><strong>数据结构</strong>：</p>
+<ul>
+<li><code>HashEntry</code> 结构体表示散列表中的每个项，包含键、值和状态。</li>
+<li><code>HashTable</code> 类封装了开放地址法的核心逻辑，使用 <code>vector</code> 存储表项。</li>
+</ul>
+</li>
+<li><p><strong>关键函数</strong>：</p>
+<ul>
+<li><strong><code>searchHash</code></strong>：根据键查找位置，处理冲突直到找到目标键或空位。</li>
+<li><strong><code>insertHash</code></strong>：调用 <code>searchHash</code> 找到合适位置，仅在状态非 <code>ACTIVE</code> 时插入新元素。</li>
+</ul>
+</li>
+<li><p><strong>冲突解决</strong>：</p>
+<ul>
+<li><code>solveCollision</code> 示例为线性探测（步长+1），可根据需求改为二次探测（如返回 <code>count * count</code>）。</li>
+</ul>
+</li>
+<li><p><strong>扩展性</strong>：</p>
+<ul>
+<li>可修改 <code>hashFunction</code> 和 <code>solveCollision</code> 实现不同的散列函数和冲突策略。</li>
+<li>插入时若表满，可添加扩容逻辑（如重新散列到更大的表）。</li>
+</ul>
+</li>
+</ol>
+<h3 id="使用示例："><a href="#使用示例：" class="headerlink" title="使用示例："></a>使用示例：</h3><div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="function">HashTable&lt;<span class="type">int</span>, string&gt; <span class="title">ht</span><span class="params">(<span class="number">10</span>)</span></span>;</span><br><span class="line">    ht.<span class="built_in">insertHash</span>(<span class="number">42</span>, <span class="string">&quot;Alice&quot;</span>);</span><br><span class="line">    ht.<span class="built_in">insertHash</span>(<span class="number">15</span>, <span class="string">&quot;Bob&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
 
 
 		</div>
@@ -483,18 +516,18 @@
 		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
 			<div class="article-copyright-info-container">
     <ul>
-        <li><strong>标题:</strong> 547.省份数量</li>
+        <li><strong>标题:</strong> 散列查找</li>
         <li><strong>作者:</strong> Wiliyaya</li>
         <li><strong>创建于
-                :</strong> 2025-05-09 23:32:03</li>
+                :</strong> 2025-05-18 15:01:12</li>
         
             <li>
                 <strong>更新于
-                    :</strong> 2025-05-09 23:41:50
+                    :</strong> 2025-05-18 15:10:35
             </li>
         
         <li>
-            <strong>链接:</strong> https://redefine.ohevan.com/2025/05/09/547-省份数量/
+            <strong>链接:</strong> https://redefine.ohevan.com/2025/05/18/散列查找/散列查找/
         </li>
         <li>
             <strong>
@@ -516,23 +549,7 @@
 		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
 			
 			<li class="tag-item mx-0.5">
-				<a href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>&nbsp;
-			</li>
-			
-			<li class="tag-item mx-0.5">
-				<a href="/tags/DFS/">#DFS</a>&nbsp;
-			</li>
-			
-			<li class="tag-item mx-0.5">
-				<a href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/">#并查集</a>&nbsp;
-			</li>
-			
-			<li class="tag-item mx-0.5">
-				<a href="/tags/%E5%9B%BE/">#图</a>&nbsp;
-			</li>
-			
-			<li class="tag-item mx-0.5">
-				<a href="/tags/LeetCode/">#LeetCode</a>&nbsp;
+				<a href="/tags/%E7%AC%94%E8%AE%B0/">#笔记</a>&nbsp;
 			</li>
 			
 		</ul>
@@ -543,23 +560,11 @@
 		
 		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
 			
-			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="prev" rel="prev" href="/2025/05/18/%E6%95%A3%E5%88%97%E6%9F%A5%E6%89%BE/%E6%95%A3%E5%88%97%E6%9F%A5%E6%89%BE/">
-					<span class="left arrow-icon flex justify-center items-center">
-						<i class="fa-solid fa-chevron-left"></i>
-					</span>
-					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item">散列查找</span>
-						<span class="post-nav-item">上一篇</span>
-					</span>
-				</a>
-			</div>
-			
 			
 			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="next" rel="next" href="/2025/04/30/19%E5%B2%81/">
+				<a class="next" rel="next" href="/2025/05/09/547-%E7%9C%81%E4%BB%BD%E6%95%B0%E9%87%8F/">
 					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item">19岁</span>
+						<span class="post-nav-title-item">547.省份数量</span>
 						<span class="post-nav-item">下一篇</span>
 					</span>
 					<span class="right arrow-icon flex justify-center items-center">
@@ -634,8 +639,8 @@
 		<div class="post-toc-wrap">
 	<div class="post-toc">
 		<div class="toc-title">目录</div>
-		<div class="page-title">547.省份数量</div>
-		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3"><span class="nav-text">题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80%EF%BC%9A%E4%BD%BF%E7%94%A8DFS%E8%AE%A1%E7%AE%97%E6%97%A0%E5%90%91%E8%BF%9E%E9%80%9A%E5%9B%BE%E7%9A%84%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F%E4%B8%AA%E6%95%B0"><span class="nav-text">方法一：使用DFS计算无向连通图的连通分量个数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C%EF%BC%9A%E7%94%A8%E5%B9%B6%E6%9F%A5%E9%9B%86%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-text">方法二：用并查集的方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E5%8C%96%E7%89%88%E7%9A%84%E9%A2%98%E8%A7%A3"><span class="nav-text">优化版的题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%8C%89%E7%A7%A9%E5%90%88%E5%B9%B6-%E8%B7%AF%E5%BE%84%E5%8E%8B%E7%BC%A9"><span class="nav-text">1. 按秩合并 + 路径压缩</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E9%81%8D%E5%8E%86%E9%82%BB%E6%8E%A5%E7%9F%A9%E9%98%B5%E6%97%B6%E5%8F%AA%E9%81%8D%E5%8E%86%E4%B8%8A%E4%B8%89%E8%A7%92"><span class="nav-text">2. 遍历邻接矩阵时只遍历上三角</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%85%B6%E5%AE%83"><span class="nav-text">3.其它</span></a></li></ol></li></ol>
+		<div class="page-title">散列查找</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%95%A3%E5%88%97%E5%87%BD%E6%95%B0%E7%9A%84%E6%9E%84%E9%80%A0"><span class="nav-text">一、散列函数的构造</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%95%A3%E5%88%97%E5%86%B2%E7%AA%81%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-text">二、散列冲突的解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%BC%80%E6%94%BE%E5%9C%B0%E5%9D%80%E6%B3%95"><span class="nav-text">1.开放地址法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%86%8D%E6%95%A3%E5%88%97%E6%B3%95"><span class="nav-text">2.再散列法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E9%93%BE%E5%9C%B0%E5%9D%80%E6%B3%95"><span class="nav-text">3.链地址法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E4%BB%A3%E7%A0%81"><span class="nav-text">相关代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E8%AF%B4%E6%98%8E%EF%BC%9A"><span class="nav-text">代码说明：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B%EF%BC%9A"><span class="nav-text">使用示例：</span></a></li></ol></li></ol>
 
 	</div>
 </div>
