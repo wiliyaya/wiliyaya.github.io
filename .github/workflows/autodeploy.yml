@@ -19,7 +19,7 @@ jobs:
       uses: actions/checkout@v3  # 更稳定
       with:
         ref: main
-        token: ${{secrets.GITHUBTOKEN }}
+        token: ${{secrets.GITHUBTOKEN}}
 
     - name: 安装 Node
       uses: actions/setup-node@v3
@@ -28,7 +28,7 @@ jobs:
         cache: npm  # 让 GitHub 自动缓存 npm 依赖，加快执行速度
 
     - name: 设置时区
-      run: |
+      run: 
         export TZ='Asia/Shanghai'
 
     - name: 缓存 Hexo 依赖
@@ -36,11 +36,11 @@ jobs:
       with:
         path: node_modules
         key: hexo-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
-        restore-keys: |
+        restore-keys: 
           hexo-${{ runner.os }}-
 
     - name: 安装 Hexo
-      run: |
+      run: 
         npm install hexo-cli -g
 
     - name: 安装依赖
@@ -48,12 +48,17 @@ jobs:
 
 
     - name: 生成静态文件
-      run: |
+      run: 
         hexo clean
         hexo generate
 
     - name: 部署到 GitHub Pages
-      uses: peaceiris/actions-gh-pages@v4
-      with:
-        github_token: ${{ secrets.GITHUBTOKEN }}
-        publish_dir: ./public
+      run: 
+        cd ./public
+        git init
+        git config --global user.name 'wiliyaya' 
+        git config --global user.email '1400513449@qq.com'
+        git add .
+        git commit -m "更新博客 $(date +"%Z %Y-%m-%d %A %H:%M:%S") Updated By Github Actions"
+        git branch -M main
+        git push --force --quiet "https://wiliyaya:${{ secrets.GITHUBTOKEN }}@github.com/wiliyaya/wiliyaya.github.io.git" main
