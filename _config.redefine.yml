@@ -1,0 +1,7 @@
+# 启用「关于我」页面
+about:
+  enable: true
+  title: 关于我
+  subtitle: 探索我的故事
+  avatar: /images/avatar.jpg  # 头像路径
+  # 其他自定义项（如社交链接、技能图表等，需参考主题文档）
