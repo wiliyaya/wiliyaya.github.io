@@ -53,12 +53,7 @@ jobs:
         hexo generate
 
     - name: 部署到 GitHub Pages
-      run: |
-        cd ./public
-        git init
-        git config --global user.name 'wiliyaya' 
-        git config --global user.email '1400513449@qq.com'
-        git add .
-        git commit -m "更新博客 $(date +"%Z %Y-%m-%d %A %H:%M:%S") Updated By Github Actions"
-        git branch -M main
-        git push --force --quiet "https://wiliyaya:${{ secrets.GITHUBTOKEN }}@github.com/wiliyaya/wiliyaya.github.io.git" main
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUBTOKEN }}
+        publish_dir: ./public
