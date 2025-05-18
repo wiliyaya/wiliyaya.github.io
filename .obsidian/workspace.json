@@ -182,6 +182,8 @@
   },
   "active": "1ac4b8989380fd76",
   "lastOpenFiles": [
+    "source/_posts/1-1.md",
+    "source/_posts/1-1",
     "source/_posts/1.md",
     "public/images/redefine-avatar.svg",
     "public/404.html",
@@ -199,7 +201,6 @@
     "public/fontawesome/thin.min.css",
     "public/fontawesome/svg-with-js.min.css",
     "public/fontawesome/solid.min.css",
-    "public/fontawesome/sharp-solid.min.css",
     "source/_posts/547-省份数量.md",
     "source/_posts/散列查找.md",
     "source/_posts/hello.md",
