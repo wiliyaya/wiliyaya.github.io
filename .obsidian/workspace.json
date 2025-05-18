@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/散列查找.md",
+                "file": "source/_posts/hello-world.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "散列查找"
+              "title": "hello-world"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/散列查找.md",
+                "file": "source/_posts/hello-world.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "散列查找 的大纲"
+              "title": "hello-world 的大纲"
             }
           },
           {
@@ -180,8 +180,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4576cf5c3830b499",
+  "active": "1ac4b8989380fd76",
   "lastOpenFiles": [
+    "source/_posts/547-省份数量.md",
+    "source/_posts/散列查找.md",
+    "source/_posts/hello.md",
     "db.json",
     "public/webfonts/fa-light-300.ttf",
     "public/webfonts/fa-thin-100.ttf",
@@ -192,15 +195,11 @@
     "public/2025/05/09/547-省份数量/index.html",
     "public/2025/04/04/hello-world/index.html",
     "public/2025/04/30/19岁",
-    "public/2025/05/19/hello",
     "public/images/bookmark-placeholder.svg",
     "images/散列查找/散列查找/hash5.png.md",
-    "source/_posts/散列查找.md",
     "images/散列查找/hash2.png.md",
-    "source/_posts/547-省份数量.md",
     "111.md",
     "source/Templates/T1.md",
-    "source/_posts/hello.md",
     "source/_posts/19岁.md",
     "source/_posts/hello-world.md",
     "node_modules/@adobe/css-tools/Readme.md"
