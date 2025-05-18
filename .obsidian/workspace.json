@@ -180,12 +180,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1ac4b8989380fd76",
+  "active": "4576cf5c3830b499",
   "lastOpenFiles": [
+    "db.json",
+    "public/webfonts/fa-light-300.ttf",
+    "public/webfonts/fa-thin-100.ttf",
+    "public/webfonts/fa-duotone-900.ttf",
+    "public/2025/04/30/19岁/index.html",
+    "public/2025/05/19/hello/index.html",
+    "public/2025/05/18/散列查找/index.html",
+    "public/2025/05/09/547-省份数量/index.html",
+    "public/2025/04/04/hello-world/index.html",
+    "public/2025/04/30/19岁",
+    "public/2025/05/19/hello",
+    "public/images/bookmark-placeholder.svg",
     "images/散列查找/散列查找/hash5.png.md",
-    "images/散列查找/散列查找",
-    "images/散列查找",
-    "images",
     "source/_posts/散列查找.md",
     "images/散列查找/hash2.png.md",
     "source/_posts/547-省份数量.md",
@@ -194,7 +203,6 @@
     "source/_posts/hello.md",
     "source/_posts/19岁.md",
     "source/_posts/hello-world.md",
-    "source/Templates",
     "node_modules/@adobe/css-tools/Readme.md"
   ]
 }
