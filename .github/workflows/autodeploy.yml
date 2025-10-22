@@ -1,0 +1,64 @@
+# GitHub Actions: 自动部署 Hexo 博客
+
+name: 自动部署
+
+on:
+  push:
+    branches:
+      - main  # 监听 main 分支，触发部署，如果你的分支不是 main，比如 master 那后面的 main 都要改掉。
+
+  release:
+    types:
+      - published
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 检查分支
+      uses: actions/checkout@v3  # 更稳定
+      with:
+        ref: main
+        token: ${{secrets.GITHUBTOKEN}}
+
+    - name: 安装 Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: "18"  
+        cache: npm  # 让 GitHub 自动缓存 npm 依赖，加快执行速度
+
+    - name: 设置时区
+      run: |
+        export TZ='Asia/Shanghai'
+
+    - name: 缓存 Hexo 依赖
+      uses: actions/cache@v3
+      with:
+        path: node_modules
+        key: hexo-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+        restore-keys: |
+          hexo-${{ runner.os }}-
+
+    - name: 安装 Hexo
+      run: |
+        npm install hexo-cli -g
+
+    - name: 安装依赖
+      run: npm install  # 直接 `npm install`
+
+
+    - name: 生成静态文件
+      run: |
+        hexo clean
+        hexo generate
+
+    - name: 部署到 GitHub Pages
+      run: |
+        cd ./public
+        git init
+        git config --global user.name 'wiliyaya' 
+        git config --global user.email '1400513449@qq.com'
+        git add .
+        git commit -m "更新博客 $(date +"%Z %Y-%m-%d %A %H:%M:%S") Updated By Github Actions"
+        git branch -M main
+        git push --force --quiet "https://wiliyaya:${{ secrets.GITHUBTOKEN }}@github.com/wiliyaya/wiliyaya.github.io.git" main

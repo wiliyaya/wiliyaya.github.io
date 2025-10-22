@@ -1,0 +1,7 @@
+- category: "伙伴"  # 分类名称
+  icon: fas fa-code    # 分类图标（可选）
+  list:
+    - name: "Moyuin's Blog"
+      link: https://blog.moyuin.top
+      avatar: https://avatars.githubusercontent.com/u/174886737?v=4
+      desc: 我的大佬舍友
